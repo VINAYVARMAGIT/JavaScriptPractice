@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>NoOfDays</title>
+</head>
+<body>
+    <h1>No Of Days </h1>
+    <script>
+        function daysInMonth(){
+            let year = 1976;
+            let month= 6;
+
+            if(year%4==0 && year%100 !=0 || year%400==0 )
+            {
+               if(month == 2) {
+                console.log("There are 29 days in " +year +" of "+month +"th month");
+               }
+               else if(month ==4 || month ==6 || month ==9 || month ==11)
+                {
+                    console.log("There are 30 days in " +year +" of "+month +"th month");
+                }
+               else{
+                console.log("There are 31 days in " +year +" of "+month +"th month");
+               }
+            }
+            else{
+                if(month == 2) {
+                console.log("There are 28 days in " +year +" of "+month +"th month");
+               }
+               else if(month ==4 || month ==6 || month ==9 || month ==11)
+                {
+                    console.log("There are 30 days in " +year +" of "+month +"th month");
+                }
+               else{
+                console.log("There are 31 days in " +year +" of "+month +"th month");
+               }
+            }
+       }
+       daysInMonth();
+    </script>
+</body>
+</html>
