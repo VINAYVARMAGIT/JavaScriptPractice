@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity</title>
+</head>
+<body>
+    <h1>Electricty Calculator</h1>
+    <script>
+  function billCalculation(){
+   let billUnits =547;
+   let billCost = 0;
+
+   if (billUnits>200) {
+        billUnits -= 200;
+         if (billUnits>50) {
+            billCost += 50*3;
+            billUnits -=50;
+            if (billUnits>50) {
+                billCost += 50*5;
+                billUnits -=50;
+                if (billUnits>0) {
+                    billCost += billUnits*7;
+                }
+            } else {
+                billCost += billUnits*5;
+            }
+         } else {
+            billCost += billUnits*3;
+         }
+   } else {
+    console.log("This bill don't have charges as it is less than 200 units.");
+   return;
+   }
+   console.log(billCost);
+   } 
+
+   billCalculation();
+    </script>
+</body>
+</html>
