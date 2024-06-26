@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> CurrencyCalculator</title>
+</head>
+<body>
+    <h1>Currency Calculator</h1>
+    <script>
+        function  curencyCalculator(){
+            let totalAmount =4300;
+            let count = 0;
+           
+            if (totalAmount>=2000) {
+                count += Math.trunc(totalAmount/2000);
+                totalAmount %= 2000;
+            }
+            if (totalAmount>=500) {
+                count += Math.trunc(totalAmount/500);
+                totalAmount %= 500;
+            }
+            if (totalAmount>=200) {
+                count += Math.trunc(totalAmount/200);
+                totalAmount %= 200;
+            }
+            if (totalAmount==100) {
+               count++;
+            }
+         console.log(count);
+        }
+        curencyCalculator();
+    </script>
+</body>
+</html>
