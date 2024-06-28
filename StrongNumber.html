@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ">
+<head>
+   <script>
+    function strongNumber(){
+       let num = prompt("Enter the number:");
+       let dupNum=num;
+       let sum =0;
+       while(num>0){
+        let rem = num%10;
+        let fact = 1;
+        for (let i = rem; i>0;i--){
+            fact *= i;
+        }
+        sum += fact;
+        num =Math.trunc(num/10);
+       } 
+       if(sum == dupNum) console.log("It's a Strong Number");
+       else console.log("It's not a Strong Number.")
+    }
+
+    strongNumber();
+   </script>
+    <title>Document</title>
+</head>
+<body>
+  <h1> Strong Number</h1>  
+</body>
+</html>
