@@ -25,7 +25,7 @@
 </body>
 </html> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html >
 <head>
     <title>Document</title>
@@ -50,6 +50,34 @@
     </script>
 </head>
 <body>
-    <h1>Fibonacci Series for a range.</h1>
+    <h1>Alternate Fibonacci Series for a range.</h1>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+    <script>
+        let n = prompt("Enter the number");
+     
+        let a =0;
+        let b =1;
+        let num = "";
+        num = a + " ";      
+        let res = "";
+        for(let i =0; i>=0;i++){
+         let c = a+b;
+         if(n == c) {
+            console.log('Yes the number comes in fibonacci series.');
+            break;
+         }
+           a=b;
+           b=c;
+        }
+    </script>
+</head>
+<body>
+    <h1>Is the number a Fibonacci number.</h1>
 </body>
 </html>

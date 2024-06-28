@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Document</title>
+    <script>
+        function main(){
+        let n = prompt("Enter the number");
+     
+        let a =0;
+        let b =1;      
+        let res = "";
+        for(let i =0; i>=n;i++){
+         let c = a+b;
+         if(n == c) {
+            console.log('Yes the number comes in fibonacci series.');
+            break;
+         }
+           a=b;
+           b=c;
+        }
+        console.log("It's not a Fibonacci number")
+    }
+    main();
+        
+    </script>
+</head>
+<body>
+    <h1>Is the number a Fibonacci number.</h1>
+</body>
+</html>
