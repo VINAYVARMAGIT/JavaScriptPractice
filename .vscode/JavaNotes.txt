@@ -1,0 +1,264 @@
+JavaScript :
+- High level programming language (Human understandable language)
+-1994 at Netscape 
+-It's a dynamic programming language (That means we need not to declare the type of the data for the varaible we use it will assign by itself during the runtime)
+-It's used for both Frontend and Backend purposes
+FrontEnd - ReactJs or AngularJs
+Backend - NodeJs or ExpressJs
+-It's a Multi paradigm language 
+-JS is a implict Semicolon(;) language
+-We cannot directly run in the chrome so we attach them with html files and run there.
+
+
+INDENTIFIERS:
+-They are the names given to the varaibles,functions,
+objects and anytype identifying things.
+-There are some rules that we need to follow to give name to it.
+-Shouldn't start with nums
+
+VARIABLES:
+-They are the containers used to store the values in it.
+-To create a variable we use these 3 keywords.They are :
+  -let
+  -const 
+  -var
+
+STRICT  MODE
+
+TDZ(Temporal Dead Zone)
+
+let a
+console.log(a); //The output is undefined as the JS will allocate a undefined default value for the variable .
+
+DATATYPES:
+- Primtive datatypes (number,string,boolean..etc)(undefined is also a datatype which is not initialized)
+- Non-primitve datatypes(functions,methods,arrays,objects)
+
+OPERATTORS:
++,-,*,%,/
+
+CONCATINATION
+
+ASSIGNMENT OPERATORS:
+=,+=,*=,%=,/=
+
+User Input:
+Using this we can take input i.e 
+let a = prompt("Enter the number:)
+console.log(a);
+
+
+TYPE CONVERSION:
+-Explicity Casting the one datatype to another 
+TYPE COERSION: 
+-Implicitly the JS coverts the datatypes 
+
+FALSY VALUES:
+-There are 6 values:
+  -undefined 
+  -null
+  -0
+  -false
+  -""
+  -NaN
+
+TRUTHY VALES:
+Except those 6 values all are truthy values.
+
+UNARY OPERATORS:
+++i(pre)and i++(post increments)
+--i(pre)and i--(post decrements)
+
+
+RELATIONAL OPERATORS:
+>,<,>=,<=,==,!=
+===, !==(Strict Checking happens)
+
+LOGICAL OPERATORS:
+Binary Operators- &&,||
+Unary Operators -!
+
+BITWISE OPERATORS:
+&,|
+
+Nullish Colescing:
+let v = value ?? defaultValue;
+(Using this we return the defaultValue if the value is Null or undefined
+or else we will get the value itself).
+
+Problems Regarding Upto This Topic :
+1.Leap Year;
+2.To print the number of days in the months of a given year 
+3.Currency Calc;
+4.Electricity Bill Calc
+
+
+LOOPING STATEMENTS:
+-for Loop
+-while Loop
+-do while Loop
+
+
+FLOW CONTROL STATEMENTS:
+-break;(Just breaks the looping statemnet)
+-continue;(skips the condition accepted loop)
+-return;(comes out of the function itself)
+
+
+Problems-
+1.Prime number;
+2.Perfect Number;
+3.Fibonacci Series;
+4.Factorial of number;
+
+
+
+FUNCTIONS:
+
+There are 3 types of functions in JS:
+
+-Function Declaration
+-Function Expression
+-Arrow Functions
+
+-Functions doesn't have any return type involed while writing them.
+So,it will return any type
+
+UNREACHABLE STATEMENTS:
+-They are the statements written in code wil not be executed anytime in the future 
+-Ex: when we wirte return in the code and line of code next to it so if the code always return the stmt then the other will not be executed anytime.
+
+FUNCTIONS WITH PARAMTERS:
+
+FORMAL Parameters - The parameters which are given in the Declaration
+ACTUAL Parameters - The parameters which are given in the execution of the function.
+
+To call a function with Formal parameters need not to have the same no of Actual parameters we can call it even if it doesn't match.
+
+CALLBACK FUNCTONS:
+-The functions which are passed in the other functions as parameters.
+
+HIGHER ORDER FUCNTIONS:
+-The function which take the functions as parameters.
+-The  Functions which return the function is also.
+
+FUNCTION DECLARATION:
+-The syntax of the function is 
+
+function functioname(){
+
+}
+
+To execute = call function functioname()
+
+FUNCTION EXPRESSION:
+-The syntax is 
+
+let anyVariable = function functioname(){} or (anonymous function)function (){}
+
+
+ARROW FUNCTION:(ES6) 
+-The syntax is 
+
+let anyVariable = () => {}
+
+
+PURE FUNCTION:
+-The function which returns the same output for the given parameters.
+
+IMPURE/SIDE FUNCTION:
+-The function which returns the different output for the given parameters.
+
+IIFE(IMMEDIATE INVOKED FUNCTION EXPRESSION):
+-IT's executed the movement it is created.
+
+The syntax goes like this 
+
+(function {})()
+
+
+HOISTING:
+-The function call will take value when called from anywhere
+i.e if the call is before or after the function is implemented.
+
+
+EXECUTION CONTEXT(EC):
+
+-All the process of execution in JS takes place in EC only.
+-The first execution context is called GEC(GLOBAL EXECUTION CONTEXT)
+-Then all are FEC(FUNCTION EXECUTION CONTEXT)
+
+In every execution context there are 2 phases:
+They are:
+1.Memory or varibale environment
+2.Code or Thread of execution
+(Remember the working of this execution context will be in the form of recursive methods in the java)
+
+MEMORY:
+This is where the varaibles and functons are loaded with the predefined values of it .
+(Ex: for variables= undefined 
+functions= the whole code of the function)
+
+CODE:
+This is the line of execution comes and gets executed of their function to do.
+
+
+The working of the execution context happens in the step by process that's why it is called as 
+-Synchronous 
+-Single Threaded proagramming language
+
+SINGLE THREADED:
+
+The EC are loaded in the CALL STACK of the JS runtime environment it works as FIFO method 
+-First it is loaded with GEC then comes the other EC statements one by one and get executed.
+
+
+LEXICAL SCOPE:
+-It's nothing but the scope of an varaible that can be accessed in the function or any context in the JS
+
+There are 3 types of accesseiblity of this varaibles.They are :
+-Global variable
+-Local level
+-Block level
+
+CLOSURE:
+-It's the process of defining a function inside another function is called as closure.
+-The accesseiblity of the varaibles will be available for the inner function even after the fucntion is executed.
+-It follows the lexical scoping method.
+
+function outerFuncton(){
+  let variable = 'name';
+  function innerFuncntion(){
+    console.log(variable)
+  }
+ return innerFuncntion
+}
+
+let myFunction = outerFuncton()
+myFunction();// output : name
+
+function createMultiplier(multiplier) {
+  return function(number) {
+    return number * multiplier;
+  };
+}
+
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+
+console.log(double(5)); // Output: 10
+console.log(triple(5)); // Output: 15
+// In the above function of double,triple stores the return function in it when 
+//we try to call them with assigned varaible with passing the parameters in it the functions get executed 
+//and remembers the value of the outerFunction also this called as CLOSURES in JS 
+
+
+VAR - LET - CONST:
+
+-This are like the data accessing keywords or the functionality of a varaible to be declared for it.
+
+Re-declaration : 1 - 0 - 0
+Re-initilaizaton : 1 - 1 - 0
+Hoisting/accesseiblity : undefined - RE(reference error) - RE
+Initializaton : 1 -1 - 0
+Scope : Global - Block - Block
