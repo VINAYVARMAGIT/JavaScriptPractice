@@ -262,3 +262,6 @@ Re-initilaizaton : 1 - 1 - 0
 Hoisting/accesseiblity : undefined - RE(reference error) - RE
 Initializaton : 1 -1 - 0
 Scope : Global - Block - Block
+
+JS is a loosely typed or flexible   language as the varaiables doesn't have anytype we assign any value later on in the code.
+ 

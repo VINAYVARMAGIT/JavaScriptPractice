@@ -3,21 +3,62 @@
 <head>
    <script>
 
-    debugger 
-    display();
-console.log(y);
-console.log(display)
-let y = 10;
-function display(){
-    console.log("Vinay Varma")
-}
+// let x = 1
+// a()
+// b()
+// console.log(x);
 
-var name = () =>console.log("Vinay Varma")
+// function a(){
+//     let x = 10;
+//     console.log(x)
+// }
+// function b(){
+//     let x = 100
+//     console.log(x)
+// }
+
+// const a;
+// a=100;//Syntax error
+
+// console.log(a)
+// let a =10;// reference error
+
+// console.log(x)
+// let a=10// Not defined 
+
+// let b = 100;
+// function s(){
+//     let b = 20;
+//     console.log(b)
+// }
+// s();
+// console.log(b);
+
+let obj={
+    name : "vinay",
+    age : 21,
+    colour : "black",
+    running : function(){
+        console.log("Vinay is running")
+    }
+}
+//shallow copy
+console.log(obj.running())
+let obj2 = obj
+obj2.name= "varma"
+console.log(obj)
+//deep copy
+let obj3 = Object.assign({},obj)
+obj3.name="vinay   "
+console.log(obj3)
+
    </script>
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>
+        Global Execution
+    </h1>
 </body>
 
 
